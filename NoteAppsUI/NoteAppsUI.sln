@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteAppsUI", "NoteAppsUI\NoteAppsUI.csproj", "{55FB208C-55D1-4125-837F-E9163DF1A26B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55FB208C-55D1-4125-837F-E9163DF1A26B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55FB208C-55D1-4125-837F-E9163DF1A26B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55FB208C-55D1-4125-837F-E9163DF1A26B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55FB208C-55D1-4125-837F-E9163DF1A26B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2B523F0-C611-4965-9EB2-3AEA77391D3E}
+	EndGlobalSection
+EndGlobal
