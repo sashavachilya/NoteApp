@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using NoteAppsUI;
+
 namespace NoteAppsUI
 {
     public partial class MainForm : Form
@@ -15,6 +17,11 @@ namespace NoteAppsUI
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
