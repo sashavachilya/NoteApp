@@ -5,10 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading.Tasks;
+using System.IO;
+using Newtonsoft.Json;
 
-using NoteAppsUI;
+using NoteApps;
 
 namespace NoteAppsUI
 {
@@ -16,9 +18,8 @@ namespace NoteAppsUI
     {
         public MainForm()
         {
-            InitializeComponent();
+           InitializeComponent();
         }
-
         private void MainForm_Load(object sender, EventArgs e)
         {
 
