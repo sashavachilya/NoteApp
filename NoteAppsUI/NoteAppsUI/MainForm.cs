@@ -25,7 +25,7 @@ namespace NoteAppsUI
             Note[] note = new Note[2];
             for (int i = 0; i < 2; i++)
             {
-                note[i] = new Note("Тестовая заметка " + i, NoteCategory.Other, "Заметка для теста", DateTime.Now);
+                note[i] = new Note("Тестовая заметка " + (i + 1), NoteCategory.Other, " *** Тест ***", DateTime.Now);
                 Console.WriteLine(note[i].NameNote + "  " + note[i].Category + "  " + note[i].TextNote + "  " + note[i].TimeCreate);
                 project.Glossary.Add(note[i]);
             }
