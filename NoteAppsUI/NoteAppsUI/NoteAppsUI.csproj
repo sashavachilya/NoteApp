@@ -84,13 +84,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\NoteApps\NoteApps.csproj">
       <Project>{24913b3e-c21a-4f5b-b9c9-9c6a67cce501}</Project>
       <Name>NoteApps</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
