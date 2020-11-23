@@ -9,15 +9,20 @@ using System.Windows.Forms;
 using System.Threading.Tasks;
 using System.IO;
 
+using NoteAboutUI;
+using NoteEditUI;
 using NoteApps;
 
 namespace NoteAppsUI
 {
     public partial class MainForm : Form
     {
+        Project allNotes = new Project();
+        List<Note> sortNotes = new List<Note>();
         public MainForm()
         {
            InitializeComponent();
+           
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -32,6 +37,22 @@ namespace NoteAppsUI
             ProjectManager.SaveToFile(project);
         }
 
-      
+        private void AddNoteButton_Click(object sender, EventArgs e)
+        {
+            Form form = new EditForm();
+            form.Show(); // отображаем EditForm для создания заметки
+        }
+
+        private void addNoteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new EditForm();
+            form.Show(); // отображаем EditForm для создания заметки
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new AboutForm();
+            form.Show(); // отображаем AboutForm для показа информации о продукте
+        }
     }
 }

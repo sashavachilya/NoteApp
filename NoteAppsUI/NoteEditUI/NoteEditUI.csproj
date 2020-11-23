@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{55FB208C-55D1-4125-837F-E9163DF1A26B}</ProjectGuid>
+    <ProjectGuid>{E204CF43-9A00-4D0F-BD28-B2CA34A0CF37}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>NoteAppsUI</RootNamespace>
-    <AssemblyName>NoteAppsUI</AssemblyName>
+    <RootNamespace>NoteEditUI</RootNamespace>
+    <AssemblyName>NoteEditUI</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,49 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AboutForm.Designer.cs">
-      <DependentUpon>AboutForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="EditForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditForm.Designer.cs">
       <DependentUpon>EditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AboutForm.resx">
-      <DependentUpon>AboutForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -103,27 +84,6 @@
       <Project>{8cb6d76a-3dea-4a98-b0ca-38a9d14ab6a9}</Project>
       <Name>NoteApp</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-добавить-файл-24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-редактирование-файла-24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-удалить-24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-добавить-файл-24 %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-редактирование-файла-24 %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-удалить-файл-24 %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -73,6 +73,16 @@ namespace NoteAppsUI.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_добавить_файл_24__2_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-добавить-файл-24 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_редактирование_файла_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-редактирование-файла-24", resourceCulture);
@@ -83,9 +93,29 @@ namespace NoteAppsUI.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_редактирование_файла_24__2_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-редактирование-файла-24 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_удалить_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-удалить-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_удалить_файл_24__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-удалить-файл-24 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
