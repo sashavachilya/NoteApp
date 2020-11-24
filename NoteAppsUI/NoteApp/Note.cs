@@ -1,49 +1,43 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-
-using NoteApps;
-
 
 namespace NoteApps
 {
     /// <summary>
     /// Класс, содержащий поля заметок
     /// </summary>
-    public class Note
+    public class Note : ICloneable
     {
         private DateTime _timeCreate;
         private DateTime _timeLastChange;
         private string _nameNote;
-        private NoteCategory _noteCategory;
+        private NoteCategory _categoryNote;
         private string _textNote;
 
         /// <summary>
-        /// Метод ввода названия заметки
+        /// Метод ввода и получения названия заметки
         /// </summary>
         public string NameNote
         {
             get { return _nameNote; }
             set
             {
-                if (value.Length > 50) throw new ArgumentException("Название записи должно быть меньше 50 символов");
-                else if (value.Length == 0) _nameNote = "Без названия";
-                else _nameNote = value;
+                _nameNote = value;
+                if (_nameNote.Length > 50) throw new ArgumentException("Длина названия заметки не должна превышать 50 символов");
+                if (_nameNote.Length == 0) _nameNote = "Без названия";
             }
         }
 
         /// <summary>
-        /// Метод ввода категорию заметки
+        /// Метод ввода и получения категорию заметки
         /// </summary>
         public NoteCategory Category
         {
-            get { return _noteCategory; }
-            set { _noteCategory = value; }
+            get { return _categoryNote; }
+            set { _categoryNote = value; }
         }
 
         /// <summary>
-        /// Метод ввода текста заметки
+        /// Метод ввода и получения текста заметки
         /// </summary>
         public string TextNote
         {
@@ -52,14 +46,18 @@ namespace NoteApps
         }
 
         /// <summary>
-        /// Метод фиксирования времени создания записи
+        /// Метод фиксирования и получения времени создания записи
         /// </summary>
-        public DateTime TimeCreate { get; private set; }
+        public DateTime TimeCreate
+        {
+            get { return _timeCreate; }
+            private set { _timeCreate = value; }
+        }
 
 
 
         /// <summary>
-        /// Метод фиксирования времени изменения записи
+        /// Метод фиксирования и получения времени изменения записи
         /// </summary>
         public DateTime TimeLastChange
         {
@@ -90,4 +88,5 @@ namespace NoteApps
 
         }
     }
+
 }

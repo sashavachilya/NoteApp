@@ -38,7 +38,7 @@
             this.DateTimeChange = new System.Windows.Forms.DateTimePicker();
             this.NoteTextBox = new System.Windows.Forms.TextBox();
             this.OkButton = new System.Windows.Forms.Button();
-            this.CancelButton = new System.Windows.Forms.Button();
+            this.CancelButton1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -128,22 +128,22 @@
             this.OkButton.UseVisualStyleBackColor = true;
             this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
-            // CancelButton
+            // CancelButton1
             // 
-            this.CancelButton.Location = new System.Drawing.Point(552, 415);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(75, 23);
-            this.CancelButton.TabIndex = 10;
-            this.CancelButton.Text = "Cancel";
-            this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancelButton1.Location = new System.Drawing.Point(552, 415);
+            this.CancelButton1.Name = "CancelButton1";
+            this.CancelButton1.Size = new System.Drawing.Size(75, 23);
+            this.CancelButton1.TabIndex = 10;
+            this.CancelButton1.Text = "Cancel";
+            this.CancelButton1.UseVisualStyleBackColor = true;
+            this.CancelButton1.Click += new System.EventHandler(this.CancelButton1_Click);
             // 
             // EditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(639, 450);
-            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.CancelButton1);
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.NoteTextBox);
             this.Controls.Add(this.DateTimeChange);
@@ -154,6 +154,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TitleTextBox);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(655, 489);
+            this.MinimumSize = new System.Drawing.Size(655, 489);
             this.Name = "EditForm";
             this.Text = "Add/Edit Note";
             this.ResumeLayout(false);
@@ -173,7 +175,7 @@
         private System.Windows.Forms.DateTimePicker DateTimeChange;
         private System.Windows.Forms.TextBox NoteTextBox;
         private System.Windows.Forms.Button OkButton;
-        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button CancelButton1;
     }
 }
 

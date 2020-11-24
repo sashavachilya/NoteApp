@@ -32,6 +32,7 @@ namespace NoteEditUI
                 _note = value;
                 if (_note != null)
                 {
+                    //при отправлении заметки в это окно, автоматом заполнятся компоненты формы
                     TitleTextBox.Text = _note.NameNote;
                     CategoriesComboBox.SelectedItem = _note.Category;
                     DateTimeCreate.Value = _note.TimeCreate;
@@ -47,11 +48,6 @@ namespace NoteEditUI
             this.Text = text;
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void OkButton_Click(object sender, EventArgs e)
         {
             if ((CategoriesComboBox.SelectedIndex == -1) || (NoteTextBox.Text == string.Empty) || (TitleTextBox.Text == string.Empty))
@@ -60,15 +56,19 @@ namespace NoteEditUI
             }
             else
             {
-                _note.TimeLastChange = DateTime.Now;
                 _note.NameNote = TitleTextBox.Text;
                 _note.TextNote = NoteTextBox.Text;
                 _note.Category = (NoteCategory)CategoriesComboBox.Items[CategoriesComboBox.SelectedIndex];
-
+                _note.TimeLastChange = DateTime.Now;
+                DialogResult = DialogResult.OK;
                 this.Close();
             }
-            this.Close();
+
         }
 
+        private void CancelButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

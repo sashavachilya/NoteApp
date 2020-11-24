@@ -116,6 +116,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(494, 350);
+            this.MinimumSize = new System.Drawing.Size(494, 350);
             this.Name = "AboutForm";
             this.Text = "About";
             this.ResumeLayout(false);
