@@ -25,6 +25,15 @@ namespace NoteAppsUI
                 CategoriesComboBox.Items.Add(element);
             }
 
+           /* try
+            {
+                allNotes = ProjectManager.ReadingFromFile(); //загрузка списка заметок
+            }
+            catch (Exception e)
+            {
+                ProjectManager.WritingToFile(allNotes);
+            }*/
+
             CategoriesComboBox.SelectedIndex = 0; //по умолчанию 1 категория 
             if (allNotes._currentNote != -1 && allNotes._currentNote < TitlesListBox.Items.Count)
             {
