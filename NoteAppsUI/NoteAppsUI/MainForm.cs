@@ -25,15 +25,8 @@ namespace NoteAppsUI
                 CategoriesComboBox.Items.Add(element);
             }
 
-           /* try
-            {
-                allNotes = ProjectManager.ReadingFromFile(); //загрузка списка заметок
-            }
-            catch (Exception e)
-            {
-                ProjectManager.WritingToFile(allNotes);
-            }*/
-
+            allNotes = ProjectManager.ReadingFromFile(); //загрузка списка заметок
+           
             CategoriesComboBox.SelectedIndex = 0; //по умолчанию 1 категория 
             if (allNotes._currentNote != -1 && allNotes._currentNote < TitlesListBox.Items.Count)
             {
@@ -42,14 +35,7 @@ namespace NoteAppsUI
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Note[] note = new Note[2];
-            for (int i = 0; i < 2; i++)
-            {
-                note[i] = new Note("Тестовая заметка " + (i + 1), NoteCategory.Other, " *** Тест ***", DateTime.Now);
-                Console.WriteLine(note[i].NameNote + "  " + note[i].Category + "  " + note[i].TextNote + "  " + note[i].TimeCreate);
-                allNotes.Glossary.Add(note[i]);
-            }
-            ProjectManager.WritingToFile(allNotes);
+           
         }
       
         private void TitlesListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -70,7 +56,7 @@ namespace NoteAppsUI
         private void OpenEditForm()
         {
             Form form = new EditForm();
-            form.Show(); // отображаем EditForm для создания заметки
+            form.ShowDialog(); // отображаем EditForm для создания заметки
         }
 
 

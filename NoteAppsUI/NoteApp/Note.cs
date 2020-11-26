@@ -21,9 +21,9 @@ namespace NoteApps
             get { return _nameNote; }
             set
             {
-                _nameNote = value;
-                if (_nameNote.Length > 50) throw new ArgumentException("Длина названия заметки не должна превышать 50 символов");
-                if (_nameNote.Length == 0) _nameNote = "Без названия";
+                _nameNote = value;           
+                if (_nameNote?.Length > 50) throw new ArgumentException("Длина названия заметки не должна превышать 50 символов");
+                if (_nameNote?.Length == 0) _nameNote = "Без названия";
             }
         }
 

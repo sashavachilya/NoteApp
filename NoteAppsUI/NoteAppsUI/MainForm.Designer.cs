@@ -173,7 +173,6 @@
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(168, 92);
             this.label6.Name = "label6";
@@ -183,7 +182,6 @@
             // 
             // CreateDateTimePicker
             // 
-            this.CreateDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.CreateDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.CreateDateTimePicker.Location = new System.Drawing.Point(53, 89);
             this.CreateDateTimePicker.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
@@ -193,7 +191,6 @@
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 92);
             this.label5.Name = "label5";
@@ -203,7 +200,6 @@
             // 
             // ChangeDateTimePicker
             // 
-            this.ChangeDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.ChangeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.ChangeDateTimePicker.Location = new System.Drawing.Point(224, 89);
             this.ChangeDateTimePicker.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
@@ -213,7 +209,9 @@
             // 
             // NoteTextBox
             // 
-            this.NoteTextBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.NoteTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.NoteTextBox.Location = new System.Drawing.Point(3, 115);
             this.NoteTextBox.Multiline = true;
             this.NoteTextBox.Name = "NoteTextBox";
@@ -223,7 +221,6 @@
             // 
             // CategoryLabel
             // 
-            this.CategoryLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.CategoryLabel.AutoSize = true;
             this.CategoryLabel.Location = new System.Drawing.Point(55, 73);
             this.CategoryLabel.Name = "CategoryLabel";
@@ -234,7 +231,6 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 73);
             this.label3.Name = "label3";
@@ -244,7 +240,6 @@
             // 
             // TitleLabel
             // 
-            this.TitleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TitleLabel.Location = new System.Drawing.Point(3, 37);
@@ -266,6 +261,9 @@
             // 
             // TitlesListBox
             // 
+            this.TitlesListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TitlesListBox.FormattingEnabled = true;
             this.TitlesListBox.Location = new System.Drawing.Point(6, 37);
             this.TitlesListBox.Name = "TitlesListBox";
@@ -284,7 +282,9 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.Location = new System.Drawing.Point(0, 27);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -317,6 +317,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.splitContainer1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(912, 548);
             this.Name = "MainForm";
             this.Text = "NoteApp";
             this.Load += new System.EventHandler(this.MainForm_Load);

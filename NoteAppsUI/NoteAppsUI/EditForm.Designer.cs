@@ -52,6 +52,8 @@
             // 
             // TitleTextBox
             // 
+            this.TitleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TitleTextBox.Location = new System.Drawing.Point(70, 18);
             this.TitleTextBox.Name = "TitleTextBox";
             this.TitleTextBox.Size = new System.Drawing.Size(557, 20);
@@ -112,6 +114,9 @@
             // 
             // NoteTextBox
             // 
+            this.NoteTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.NoteTextBox.Location = new System.Drawing.Point(12, 97);
             this.NoteTextBox.Multiline = true;
             this.NoteTextBox.Name = "NoteTextBox";
@@ -120,6 +125,7 @@
             // 
             // OkButton
             // 
+            this.OkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.OkButton.Location = new System.Drawing.Point(471, 415);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(75, 23);
@@ -130,6 +136,7 @@
             // 
             // CancelButton1
             // 
+            this.CancelButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.CancelButton1.Location = new System.Drawing.Point(552, 415);
             this.CancelButton1.Name = "CancelButton1";
             this.CancelButton1.Size = new System.Drawing.Size(75, 23);
@@ -154,7 +161,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TitleTextBox);
             this.Controls.Add(this.label1);
-            this.MaximumSize = new System.Drawing.Size(655, 489);
             this.MinimumSize = new System.Drawing.Size(655, 489);
             this.Name = "EditForm";
             this.Text = "Add/Edit Note";
