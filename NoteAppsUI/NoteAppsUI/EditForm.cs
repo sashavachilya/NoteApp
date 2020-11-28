@@ -63,7 +63,6 @@ namespace NoteEditUI
                 DialogResult = DialogResult.OK;
                 this.Close();
             }
-
         }
 
         private void CancelButton1_Click(object sender, EventArgs e)
