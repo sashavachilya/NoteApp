@@ -40,13 +40,14 @@ namespace NoteAppsUI
       
         private void TitlesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (TitlesListBox.SelectedIndex == -1) return; //Завершение метода если элемент не выбран
+            //Проверяем и завершаем метод, если элемент не выбран
+            if (TitlesListBox.SelectedIndex == -1) return; 
             allNotes._currentNote = allNotes.RealIndexes[TitlesListBox.SelectedIndex];
             ProjectManager.WritingToFile(allNotes);
             NoteTextBox.Clear();
             sortNotes = allNotes.SortWithSelectionCategory(CategoriesComboBox.SelectedIndex);
 
-            //заполняем данными правую часть окна
+            //Заполняем данными правую часть окна
             TitleLabel.Text = sortNotes[TitlesListBox.SelectedIndex].NameNote;
             CategoryLabel.Text = "Category: " + sortNotes[TitlesListBox.SelectedIndex].Category;
             CreateDateTimePicker.Value = sortNotes[TitlesListBox.SelectedIndex].TimeCreate;
@@ -66,20 +67,18 @@ namespace NoteAppsUI
             form.Show(); // отображаем AboutForm для показа информации о продукте
         }
 
+        //вывод записей в TitleListBox
         private void FillTitleListBox()
         {
             //проверка на null(если заметок еще нет)
             if (allNotes != null)
             {
-                TitlesListBox.Items.Clear();
-
+                TitlesListBox.Items.Clear();       
                 sortNotes = allNotes.SortWithSelectionCategory(CategoriesComboBox.SelectedIndex);
-
                 {
                     for (int i = 0; i < sortNotes.Count; i++)
                     {
                         TitlesListBox.Items.Add(sortNotes[i].NameNote);
-
                     }
                 }
             }

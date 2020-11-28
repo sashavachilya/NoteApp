@@ -13,7 +13,7 @@ namespace NoteApps
         /// </summary>
         public int _currentNote = -1;
 
-        //Сортировка категорий
+        //Сортировка по категориям
         public List<int> RealIndexes = new List<int>();
         public List<Note> SortWithSelectionCategory(int category)
         {
