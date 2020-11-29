@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
 using NoteApps;
 
@@ -27,13 +24,13 @@ namespace NoteApp.UnitTests
         }
 
         [Test(Description = "Проверка заполненности заметок (нет ли незаполненных заметок)")] //Тест 1
-        public void AllItemsAreNotNull()
+        public void TestAllItemsAreNotNull()
         {
             CollectionAssert.AllItemsAreNotNull(_allNotesTest, "Список содержит заметки с незаполненными полями");
         }
 
-        [Test(Description = "Проверка, сортировки заметок по категориям")] //Тест 2
-        public void SortCategories()
+        [Test(Description = "Проверка сортировки заметок по категориям")] //Тест 2
+        public void TestSortCategories()
         {
             Project TestNote = new Project();
             for (int i = 0; i < _allNotesTest.Count; i++)
@@ -53,7 +50,7 @@ namespace NoteApp.UnitTests
         }
 
         [Test(Description = "Проверка сортировки по категории All")] //Тест 3
-        public void SortAllCategory()
+        public void TestSortAllCategory()
         {
             Project TestNote = new Project();
             for (int i = 0; i < _allNotesTest.Count; i++)
