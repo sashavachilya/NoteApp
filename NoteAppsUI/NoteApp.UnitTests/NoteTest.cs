@@ -33,6 +33,7 @@ namespace NoteApp.UnitTests
             Assert.AreEqual(expected, actual, message);
         }
 
+
         [Test(Description = "Негативный тест длины названия заметки (ожидается исключение при 50+ символах)")] 
         public void TestNameNoteSet_Loger50Symbols() //Тест 3
         {
@@ -65,13 +66,13 @@ namespace NoteApp.UnitTests
         }
 
         //Так как TimeCreate имеет модификатор сеттера private (указание ТЗ), мы можем проверить только его геттер
-        [Test(Description = "Позитивный тест геттера TimeCreation")]
+        [Test(Description = "Позитивный тест геттера TimeCreate")]
         public void TestTimeCreateGet_CorrectValue() //Тест 7
         {
             var expected = DateTime.Today;
             var actual = _note.TimeCreate;
 
-            Assert.AreEqual(expected, actual, "Геттер TimeCreation возвращает неправильную дату");
+            Assert.AreEqual(expected, actual, "Геттер TimeCreate возвращает неправильную дату");
         }
 
         [TestCase("Геттер TimeLastChange возвращает неправильную дату",
@@ -87,17 +88,16 @@ namespace NoteApp.UnitTests
             Assert.AreEqual(expected, actual, message);
         }
 
-        [TestCase("Текст заметки", "Геттер Name возвращает неправильный заголовок",
-            TestName = "Позитивный тест геттера NameNote")]
-        [TestCase("Текст заметки", "Сеттер Name записывает неправильный заголовок",
-            TestName = "Позитивный тест сеттера NameNote")]
+        [TestCase("Текст заметки", "Геттер TextNote возвращает неправильный текст заметки",
+          TestName = "Позитивный тест геттера TextNote")]
+        [TestCase("Текст заметки", "Сеттер TextNote записывает неправильный текст заметки",
+          TestName = "Позитивный тест сеттера TextNote")]
         public void TestTextNoteGetSet_CorrectValue(string expected, string message) //Тест 10,11
         {
             _note.TextNote = expected;
             var actual = _note.TextNote;
             Assert.AreEqual(expected, actual, message);
         }
-
 
         [Test(Description = "Тест коструктора класса Note")]
         public void TestNoteConstructor_CorrectValue() //Тест 12

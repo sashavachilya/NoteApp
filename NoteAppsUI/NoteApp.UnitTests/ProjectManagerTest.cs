@@ -16,7 +16,6 @@ namespace NoteApp.UnitTests
         private Project _noteLoad;
         private List<Note> _actualList;
         private static string _path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\NoteAppTest.json";
-        //private static string _path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\NoteAppTest.notes";
 
         [SetUp]
         public void InitNote()
