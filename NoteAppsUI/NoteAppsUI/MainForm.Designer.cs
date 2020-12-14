@@ -270,6 +270,7 @@
             this.TitlesListBox.Size = new System.Drawing.Size(207, 407);
             this.TitlesListBox.TabIndex = 5;
             this.TitlesListBox.SelectedIndexChanged += new System.EventHandler(this.TitlesListBox_SelectedIndexChanged);
+            this.TitlesListBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TitlesListBox_KeyDown);
             // 
             // label1
             // 

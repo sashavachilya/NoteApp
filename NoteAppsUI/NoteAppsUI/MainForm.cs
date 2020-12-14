@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-
+using System.IO;
 
 using NoteAboutUI;
 using NoteEditUI;
@@ -17,16 +17,20 @@ namespace NoteAppsUI
         public MainForm()
         {
             InitializeComponent();
-           
-            CategoriesComboBox.Items.Add("All");
 
+            ProjectManager.CheckFile();
+
+            CategoriesComboBox.Items.Add("All");
+            //
             foreach (NoteCategory element in Enum.GetValues(typeof(NoteCategory)))
             {
                 CategoriesComboBox.Items.Add(element);
             }
-
+            
             allNotes = ProjectManager.ReadingFromFile(); //загрузка списка заметок
-           
+            if (allNotes == null) allNotes = new Project();
+
+
             CategoriesComboBox.SelectedIndex = 0; //по умолчанию 1 категория 
             if (allNotes._currentNote != -1 && allNotes._currentNote < TitlesListBox.Items.Count)
             {
@@ -35,9 +39,9 @@ namespace NoteAppsUI
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-           
+
         }
-      
+
         private void TitlesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Проверяем и завершаем метод, если элемент не выбран
@@ -194,6 +198,12 @@ namespace NoteAppsUI
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void TitlesListBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+                RemoveNoteButton_Click(sender, e);
         }
     }
 }

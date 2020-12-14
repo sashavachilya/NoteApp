@@ -10,7 +10,8 @@ namespace NoteApps
     public class ProjectManager
     {
         //Константа, содержащая путь к файлу
-        private static string _path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\NoteApp.notes";
+
+        private static string _path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\NoteApp.notes";
        
         public static void WritingToFile(Project project, string file)//Запись в файл
         { 
@@ -49,7 +50,16 @@ namespace NoteApps
 
         public static Project ReadingFromFile()
         {
-           return ReadingFromFile(_path);
+            return ReadingFromFile(_path);
+        }
+        
+        public static void CheckFile()
+        {
+            if (!(File.Exists(_path)))
+            {
+                File.Create(_path).Close();
+            }
+                
         }
     }
 }
